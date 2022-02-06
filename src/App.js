@@ -1,25 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import Home from './containers/Home';
+import Offer from './containers/Offer';
+import Header from './containers/Header';
+import Signup from './containers/Signup';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+
+			<Router>
+				<nav>
+					<Link to="/">Home </Link>
+					<Link to="/signup">s'inscrire</Link>
+				</nav>
+				{/* <button onClick={() => navigate('/signup')}> S'inscrire</button> */}
+				<Routes>
+					{/* <Link to="/signup">Go to Signup Page</Link> */}
+					<Route path="/" element={<Home />} />
+					<Route path="/offer/:id" element={<Offer />} />
+					<Route path="/signup" element={<Signup />} />
+				</Routes>
+			</Router>
+		</div>
+	);
 }
 
 export default App;

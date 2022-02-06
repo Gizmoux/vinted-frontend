@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+/* HEADER */
+.header {
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-between;
+	/* box-sizing: border-box; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header button {
+	border-color: #2bb3bb;
+	border-width: 0.5px;
+	color: #2bb3bb;
+	height: 28px;
+	border-radius: 5px;
+	background-color: #fff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search {
+	height: 35px;
+	width: 350px;
+	border-radius: 5px;
+	background-color: #f5f6f7;
+	border: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+	height: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+/* HERO BANNER */
+.banner {
+	width: 100%;
+	height: auto;
+	margin-bottom: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* MAIN PAGE */
+.product-main {
+	display: flex;
+	flex-wrap: wrap;
+	/* background-color: green; */
+	align-content: space-between;
+	justify-content: space-between;
+	text-decoration: none;
+}
+.images {
+	height: 300px;
+	width: 250px;
+}
+.product {
+	/* background-color: red; */
+	margin-bottom: 30px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	box-shadow: inset;
 }
