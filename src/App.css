@@ -2,16 +2,23 @@
 .header {
 	margin: 20px auto;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	/* box-sizing: border-box; */
 }
-.header button {
+.header-buttons {
 	border-color: #2bb3bb;
 	border-width: 0.5px;
 	color: #2bb3bb;
 	height: 28px;
 	border-radius: 5px;
 	background-color: #fff;
+}
+.button-sell {
+	background-color: #2bb3bb;
+	height: 28px;
+	border-radius: 5px;
+	border-width: 0.5px;
+	color: #fff;
 }
 .search {
 	height: 35px;
@@ -25,26 +32,57 @@
 }
 /* HERO BANNER */
 .banner {
+	/* Image non centrée, à modifier */
 	width: 100%;
-	height: auto;
 	margin-bottom: 30px;
+	/* background-color: #2bb3bb; */
 }
 /* MAIN PAGE */
 .product-main {
 	display: flex;
 	flex-wrap: wrap;
 	/* background-color: green; */
-	align-content: space-between;
-	justify-content: space-between;
+	/* align-content: space-between; */
+	justify-content: space-around;
 	text-decoration: none;
 }
 .images {
 	height: 300px;
-	width: 250px;
+	max-width: 300px;
 }
 .product {
 	/* background-color: red; */
 	margin-bottom: 30px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	box-shadow: inset;
+}
+/* Sign Up */
+.form-signup {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin: 0 auto;
+	padding-left: 10px;
+	align-content: space-evenly;
+	max-width: 300px;
+	border-radius: 5px;
+	box-sizing: border-box;
+
+	/* background-color: red; */
+}
+/* Login */
+.form-login {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin: 0 auto;
+	padding-left: 10px;
+	align-content: space-evenly;
+	max-width: 300px;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+.p-form-login {
+	size: 5px;
+	font-size: 10px;
 }

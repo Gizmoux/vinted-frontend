@@ -1,22 +1,34 @@
 import Logo from '../assets/images/vinted-logo.png';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-const Header = () => {
-	// const navigate = useNavigate();
+const Header = ({ token, setUser }) => {
 	return (
 		<div className="header">
-			<div>{/* <Link to="/signup">s'inscrire</Link> */}</div>
 			<img src={Logo} alt="Logo Vinted" className="logo" />
 			<input
 				type="text"
 				placeholder="Recherche un article"
 				className="search"
 			/>
-			{/* <button onClick={() => navigate('/signup')}> S'inscrire</button> */}
-			<button>S'inscrire</button>
-			{/* <Link to="/signup">s'inscrire</Link> */}
-			<button>Se connecter</button>
-			<button>Vends tes articles</button>
+			{token !== null ? (
+				<button
+					onClick={() => {
+						setUser(null);
+					}}
+				>
+					Se déconnecter
+				</button>
+			) : (
+				<>
+					<Link to="/login">Se connecter</Link>
+					<br />
+					<Link to="/signup">S'inscrire</Link>
+				</>
+			)}
+
+			{/* <button className="header-buttons">S'inscrire</button>
+
+			<button className="header-buttons">Se connecter</button>
+			<button className="button-sell">Vends tes articles</button> */}
 		</div>
 	);
 };

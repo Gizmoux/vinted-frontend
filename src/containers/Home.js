@@ -22,13 +22,12 @@ const Home = () => {
 		<p> IS LOADING </p>
 	) : (
 		<div className="product-main">
-			{/* Aller chercher la clé de qqlch undefined => Error */}
-			<div>
-				<img src={Banner} alt="Banner" className="banner" />
+			<div className="banner">
+				<img src={Banner} alt="Banner" />
 			</div>
 			{data.offers.map((offer, index) => {
 				return (
-					<nav className="product">
+					<div className="product">
 						{offer.owner.account.username}
 						<Link to={`/offer/${offer._id}`} key={offer._id}>
 							<div>
@@ -41,7 +40,7 @@ const Home = () => {
 						</Link>
 						{offer.product_name} <br />
 						{offer.product_price}€
-					</nav>
+					</div>
 				);
 			})}
 		</div>
